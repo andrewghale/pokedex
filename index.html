@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <script>
+      const slickInit = () => {
+        $(".images-container").slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000
+        });
+      };
+    </script>
   </head>
-  <body>
+  <body onload="slickInit()">
     <div class="pokedex">
       <form class="main-form">
         <img
@@ -24,7 +35,7 @@
         </label>
       </form>
       <div class="pokemon">
-        <h1 class="name">Enter number above!</h1>
+        <h1 class="name">Pikachu</h1>
         <div class="images-container">
           <div class="image-container">
             <img

@@ -31,7 +31,9 @@ body {
   font-size: 1.2rem;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-image: url("../img/background.jpg");
+  background-size: cover; }
 
 input {
   font-family: "PokemonGb-RAeo";
@@ -133,13 +135,13 @@ input[type="submit"] {
 
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url("./ajax-loader.gif") center center no-repeat; }
+  background: #fff url("../img/ajax-loader.gif") center center no-repeat; }
 
 /* Icons */
 @font-face {
   font-family: "slick";
   src: url("./fonts/slick.eot");
-  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("../fonts/slick.woff") format("woff"), url("../fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -186,7 +188,7 @@ input[type="submit"] {
     -moz-osx-font-smoothing: grayscale; }
 
 .slick-prev {
-  left: -25px; }
+  left: -40px; }
   [dir="rtl"] .slick-prev {
     left: auto;
     right: -25px; }
@@ -196,7 +198,7 @@ input[type="submit"] {
       content: "→"; }
 
 .slick-next {
-  right: -25px; }
+  right: -40px; }
   [dir="rtl"] .slick-next {
     left: -25px;
     right: auto; }
@@ -268,8 +270,10 @@ input[type="submit"] {
     height: fit-content;
     background-color: #f0eef1;
     border: 15px solid #f3cd4d;
+    border-bottom: 7px solid #f3cd4d;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -282,16 +286,20 @@ input[type="submit"] {
   .pokedex .pokemon {
     background-color: #f0eef1;
     border: 15px solid #f3cd4d;
+    border-top: 7px solid #f3cd4d;
     border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     height: 600px;
     width: 100%; }
     .pokedex .pokemon .name {
-      text-align: center; }
+      text-align: center;
+      font-size: 2.2rem; }
     .pokedex .pokemon .images-container {
-      height: 300px;
-      width: 300px;
-      margin: 0 auto;
-      border: 1px solid; }
+      height: 275px;
+      width: 275px;
+      margin: 0 auto 3rem auto;
+      box-shadow: 0 -6px 0 -2px #f0eef1, 0 6px 0 -2px #f0eef1, 0 -12px 0 -4px #f0eef1, 0 12px 0 -4px #f0eef1, 0 -18px 0 -8px #f0eef1, 0 18px 0 -8px #f0eef1, 0 -24px 0 -12px #f0eef1, 0 24px 0 -12px #f0eef1, -2px 0 0 0 black, 2px 0 0 0 black, 0 -4px 0 0 black, 0 4px 0 0 black, 0 -10px 0 -2px black, 0 10px 0 -2px black, 0 -14px 0 -4px black, 0 14px 0 -4px black, 0 -20px 0 -8px black, 0 20px 0 -8px black, 0 -26px 0 -12px black, 0 26px 0 -12px black, -4px 0 0 0 white, 4px 0 0 0 white, 0 -2px 0 2px white, 0 2px 0 2px white, 0 -8px 0 0px white, 0 8px 0 0px white, 0 -12px 0 -2px white, 0 12px 0 -2px white, 0 -16px 0 -4px white, 0 16px 0 -4px white, 0 -22px 0 -8px white, 0 22px 0 -8px white, 0 -28px 0 -12px white, 0 28px 0 -12px white, -6px 0 0 0 black, 6px 0 0 0 black, 0 0 0 4px black, 0 -6px 0 2px black, 0 6px 0 2px black, 0 -10px 0 0 black, 0 10px 0 0 black, 0 -14px 0 -2px black, 0 14px 0 -2px black, 0 -18px 0 -4px black, 0 18px 0 -4px black, 0 -24px 0 -8px black, 0 24px 0 -8px black, 0 -30px 0 -12px black, 0 30px 0 -12px black; }
       .pokedex .pokemon .images-container .image-container {
         width: 50%;
         height: auto; }
@@ -307,10 +315,9 @@ input[type="submit"] {
   display: inline-block; }
 
 .details {
-  height: 200px;
-  border: 1px solid grey;
+  height: 140px;
+  box-shadow: 0 -6px 0 -2px #f0eef1, 0 6px 0 -2px #f0eef1, 0 -12px 0 -4px #f0eef1, 0 12px 0 -4px #f0eef1, 0 -18px 0 -8px #f0eef1, 0 18px 0 -8px #f0eef1, 0 -24px 0 -12px #f0eef1, 0 24px 0 -12px #f0eef1, -2px 0 0 0 black, 2px 0 0 0 black, 0 -4px 0 0 black, 0 4px 0 0 black, 0 -10px 0 -2px black, 0 10px 0 -2px black, 0 -14px 0 -4px black, 0 14px 0 -4px black, 0 -20px 0 -8px black, 0 20px 0 -8px black, 0 -26px 0 -12px black, 0 26px 0 -12px black, -4px 0 0 0 white, 4px 0 0 0 white, 0 -2px 0 2px white, 0 2px 0 2px white, 0 -8px 0 0px white, 0 8px 0 0px white, 0 -12px 0 -2px white, 0 12px 0 -2px white, 0 -16px 0 -4px white, 0 16px 0 -4px white, 0 -22px 0 -8px white, 0 22px 0 -8px white, 0 -28px 0 -12px white, 0 28px 0 -12px white, -6px 0 0 0 black, 6px 0 0 0 black, 0 0 0 4px black, 0 -6px 0 2px black, 0 6px 0 2px black, 0 -10px 0 0 black, 0 10px 0 0 black, 0 -14px 0 -2px black, 0 14px 0 -2px black, 0 -18px 0 -4px black, 0 18px 0 -4px black, 0 -24px 0 -8px black, 0 24px 0 -8px black, 0 -30px 0 -12px black, 0 30px 0 -12px black;
   padding: 1.2rem;
-  border-radius: 3px;
   margin: 1rem;
   display: flex;
   flex-wrap: wrap;

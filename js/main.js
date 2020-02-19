@@ -32,16 +32,6 @@ jQuery(document).ready(function($){
     return types
   }
 
-  const slickInit = () => {
-    $('.images-container').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-    });
-  };
-
   const generateHtml = (data) => {
     const { name, sprites, height, weight } = data;
     const html =
