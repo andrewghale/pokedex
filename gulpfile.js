@@ -11,7 +11,7 @@ var plumber = require("gulp-plumber");
 
 gulp.task("concatScripts", function() {
   return gulp
-    .src("js/scripts.js")
+    .src("js/main.js")
     .pipe(plumber())
     .pipe(maps.init())
     .pipe(concat("app.js"))
@@ -39,7 +39,7 @@ gulp.task("compileSass", function() {
 
 gulp.task("watchFiles", function() {
   gulp.watch("scss/**/*.scss", gulp.parallel("compileSass"));
-  gulp.watch("js/**/*.js", gulp.parallel("concatScripts"));
+  // gulp.watch("js/**/*.js", gulp.parallel("concatScripts"));
 });
 
 gulp.task("clean", function() {

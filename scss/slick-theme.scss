@@ -93,7 +93,7 @@ $slick-opacity-not-active: 0.25 !default;
   }
   &:before {
     font-family: $slick-font-family;
-    font-size: 20px;
+    font-size: 40px;
     line-height: 1;
     color: $slick-arrow-color;
     opacity: $slick-opacity-default;
@@ -103,7 +103,7 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-  left: -40px;
+  left: -60px;
   [dir="rtl"] & {
     left: auto;
     right: -25px;

@@ -37,7 +37,7 @@ jQuery(document).ready(function($){
     const html =
       `
       <h1 class="name">${capitalizeFirst(name)}</h1>
-      <div class="images-container">
+      <div class="images-container crt">
         <div class="image-container">
           <img src=${sprites.front_default} alt=${capitalizeFirst(name)}>
         </div>
