@@ -25,7 +25,14 @@
           alt="Pokedex"
         />
         <label class="label" for="numberField">
-          <input type="number" id="numberField" class="numberField" />
+          <input
+            type="number"
+            id="numberField"
+            class="numberField"
+            oninput="javascript:
+              if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="3"
+          />
           <input
             type="submit"
             value="Search"
