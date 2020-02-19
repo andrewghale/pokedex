@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="pokedex">
+      <form class="main-form">
+        <img
+          src="https://fontmeme.com/permalink/200218/1a3997af60e330e2f017c46fb6ef1985.png"
+          alt="Pokedex"
+        />
+        <label class="label" for="numberField">
+          <input type="number" id="numberField" class="numberField" />
+          <input
+            type="submit"
+            value="Submit"
+            class="guessSubmit button"
+            id="submitnumber"
+          />
+        </label>
+      </form>
+      <div class="pokemon">
+        <h1 class="name">Enter number above!</h1>
+        <div class="images-container">
+          <div class="image-container">
+            <img
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+              alt="Pikachu"
+            />
+          </div>
+          <div class="image-container">
+            <img
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png"
+              alt="Pikachu"
+            />
+          </div>
+        </div>
+        <div class="details">
+          <span>Height: -</span>
+          <span>Weight: -</span>
+          <span>Type: -</span>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

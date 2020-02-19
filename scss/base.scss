@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: rgb(213, 224, 238);
+  margin: 0;
+  padding: 0;
+  font-family: "PokemonGb-RAeo";
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  font-family: "PokemonGb-RAeo";
+  height: 50px;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  font-size: 1rem;
+  padding-left: 1rem;
+  border: 1px solid grey;
+  border-radius: 3px;
+  width: 150px;
+  margin-right: 1rem;
+}
+
+input[type="submit"] {
+  border: 1px solid darkgreen;
+  border-radius: 3px;
+}
