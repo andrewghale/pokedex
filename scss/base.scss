@@ -47,31 +47,29 @@ input[type="number"] {
 
 input[type="submit"] {
   margin-top: -6px;
-  height: 60px;
-  width: 120px;
-  font-size: 1rem;
   text-align: center;
-  cursor: pointer;
   outline: none;
-  color: #fff;
-  border: 2px solid black;
-  border-radius: 5px;
-  box-shadow: 0 9px rgba(0, 0, 0, 0.3);
   &.search {
     background-color: #4caf50;
-    box-shadow: inset -4px -4px 0px 0px #2f691d;
-    &:active {
-      box-shadow: inset 4px 4px 0px 0px #2f691d;
-      transform: translateY(2px);
-    }
   }
   &.random {
-    margin-left: 3rem;
     background: #e76e55;
-    box-shadow: inset -4px -4px 0px 0px #8c2022;
-    &:active {
-      box-shadow: inset 4px 4px 0px 0px #8c2022;
-      transform: translateY(2px);
-    }
+  }
+}
+
+.button {
+  margin: 0.2rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  color: $white;
+  font-size: 1rem;
+  font-family: "PokemonGb-RAeo";
+  box-shadow: inset -4px -4px 0px 0px rgba(0, 0, 0, 0.3);
+  &:active {
+    transform: translateY(2px);
+    box-shadow: inset 4px 4px 0px 0px rgba(0, 0, 0, 0.2);
   }
 }

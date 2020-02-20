@@ -11,44 +11,54 @@
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
-          autoplay: true,
+          autoplay: false,
           autoplaySpeed: 4000
         });
+        const namePrev = document.getElementById("name-prev");
       };
     </script>
   </head>
   <body onload="slickInit()">
     <div class="pokedex">
-      <form class="main-form">
-        <img
-          src="https://fontmeme.com/permalink/200218/1a3997af60e330e2f017c46fb6ef1985.png"
-          alt="Pokedex"
-        />
-        <label class="label" for="numberField">
-          <input
-            type="number"
-            id="numberField"
-            class="numberField"
-            oninput="javascript:
-              if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-            maxlength="3"
+      <div class="form-container">
+        <form class="main-form">
+          <img
+            src="https://fontmeme.com/permalink/200218/1a3997af60e330e2f017c46fb6ef1985.png"
+            alt="Pokedex"
           />
-          <input
-            type="submit"
-            value="Search"
-            class="guessSubmit button search"
-            id="submitnumber"
-          />
-          <input
-            type="submit"
-            value="Random"
-            class="guessSubmit button random"
-            id="submitrandom"
-          />
-        </label>
-      </form>
+          <label class="label" for="numberField">
+            <input
+              type="number"
+              id="numberField"
+              class="numberField"
+              oninput="javascript:
+                if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              maxlength="3"
+              value="25"
+            />
+            <input
+              type="submit"
+              value="Search"
+              class="guessSubmit button search"
+              id="submitnumber"
+            />
+            <input
+              type="submit"
+              value="Random"
+              class="guessSubmit button random"
+              id="submitrandom"
+            />
+          </label>
+        </form>
+        <div class="name-container">
+          <button id="name-prev" class="button">Prev</button>
+          <button id="name-next" class="button">Next</button>
+        </div>
+      </div>
       <div class="pokemon">
+        <!-- <div class="name-container"> -->
         <h1 class="name">Pikachu</h1>
+        <!-- </div> -->
         <div class="images-container crt">
           <div class="image-container">
             <img

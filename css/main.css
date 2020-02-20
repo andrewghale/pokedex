@@ -1,93 +1,5 @@
 @charset "UTF-8";
-@keyframes flicker {
-  0% {
-    opacity: 0.27861; }
-  5% {
-    opacity: 0.34769; }
-  10% {
-    opacity: 0.23604; }
-  15% {
-    opacity: 0.90626; }
-  20% {
-    opacity: 0.18128; }
-  25% {
-    opacity: 0.83891; }
-  30% {
-    opacity: 0.65583; }
-  35% {
-    opacity: 0.67807; }
-  40% {
-    opacity: 0.26559; }
-  45% {
-    opacity: 0.84693; }
-  50% {
-    opacity: 0.96019; }
-  55% {
-    opacity: 0.08594; }
-  60% {
-    opacity: 0.20313; }
-  65% {
-    opacity: 0.71988; }
-  70% {
-    opacity: 0.53455; }
-  75% {
-    opacity: 0.37288; }
-  80% {
-    opacity: 0.71428; }
-  85% {
-    opacity: 0.70419; }
-  90% {
-    opacity: 0.7003; }
-  95% {
-    opacity: 0.36108; }
-  100% {
-    opacity: 0.24387; } }
-
-@keyframes textShadow {
-  0% {
-    text-shadow: 0.43899px 0 1px rgba(0, 30, 255, 0.5), -0.43899px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  5% {
-    text-shadow: 2.7929px 0 1px rgba(0, 30, 255, 0.5), -2.7929px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  10% {
-    text-shadow: 0.02956px 0 1px rgba(0, 30, 255, 0.5), -0.02956px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  15% {
-    text-shadow: 0.40219px 0 1px rgba(0, 30, 255, 0.5), -0.40219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  20% {
-    text-shadow: 3.4794px 0 1px rgba(0, 30, 255, 0.5), -3.4794px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  25% {
-    text-shadow: 1.61256px 0 1px rgba(0, 30, 255, 0.5), -1.61256px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  30% {
-    text-shadow: 0.70156px 0 1px rgba(0, 30, 255, 0.5), -0.70156px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  35% {
-    text-shadow: 3.89691px 0 1px rgba(0, 30, 255, 0.5), -3.89691px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  40% {
-    text-shadow: 3.87091px 0 1px rgba(0, 30, 255, 0.5), -3.87091px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  45% {
-    text-shadow: 2.23106px 0 1px rgba(0, 30, 255, 0.5), -2.23106px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  50% {
-    text-shadow: 0.08084px 0 1px rgba(0, 30, 255, 0.5), -0.08084px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  55% {
-    text-shadow: 2.37585px 0 1px rgba(0, 30, 255, 0.5), -2.37585px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  60% {
-    text-shadow: 2.20219px 0 1px rgba(0, 30, 255, 0.5), -2.20219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  65% {
-    text-shadow: 2.86388px 0 1px rgba(0, 30, 255, 0.5), -2.86388px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  70% {
-    text-shadow: 0.48874px 0 1px rgba(0, 30, 255, 0.5), -0.48874px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  75% {
-    text-shadow: 1.89485px 0 1px rgba(0, 30, 255, 0.5), -1.89485px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  80% {
-    text-shadow: 0.0833px 0 1px rgba(0, 30, 255, 0.5), -0.0833px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  85% {
-    text-shadow: 0.0977px 0 1px rgba(0, 30, 255, 0.5), -0.0977px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  90% {
-    text-shadow: 3.44334px 0 1px rgba(0, 30, 255, 0.5), -3.44334px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  95% {
-    text-shadow: 2.18418px 0 1px rgba(0, 30, 255, 0.5), -2.18418px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-  100% {
-    text-shadow: 2.62088px 0 1px rgba(0, 30, 255, 0.5), -2.62088px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; } }
-
-@font-face {
+@keyframes flicker {}@keyframes textShadow {}@font-face {
   font-family: "PokemonGb-RAeo";
   src: url("../fonts/PokemonGb-RAeo.ttf"); }
 
@@ -146,29 +58,27 @@ input[type="number"] {
 
 input[type="submit"] {
   margin-top: -6px;
-  height: 60px;
-  width: 120px;
-  font-size: 1rem;
   text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
+  outline: none; }
+  input[type="submit"].search {
+    background-color: #4caf50; }
+  input[type="submit"].random {
+    background: #e76e55; }
+
+.button {
+  margin: 0.2rem;
   border: 2px solid black;
   border-radius: 5px;
-  box-shadow: 0 9px rgba(0, 0, 0, 0.3); }
-  input[type="submit"].search {
-    background-color: #4caf50;
-    box-shadow: inset -4px -4px 0px 0px #2f691d; }
-    input[type="submit"].search:active {
-      box-shadow: inset 4px 4px 0px 0px #2f691d;
-      transform: translateY(2px); }
-  input[type="submit"].random {
-    margin-left: 3rem;
-    background: #e76e55;
-    box-shadow: inset -4px -4px 0px 0px #8c2022; }
-    input[type="submit"].random:active {
-      box-shadow: inset 4px 4px 0px 0px #8c2022;
-      transform: translateY(2px); }
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  font-family: "PokemonGb-RAeo";
+  box-shadow: inset -4px -4px 0px 0px rgba(0, 0, 0, 0.3); }
+  .button:active {
+    transform: translateY(2px);
+    box-shadow: inset 4px 4px 0px 0px rgba(0, 0, 0, 0.2); }
 
 /* Slider */
 .slick-slider {
@@ -246,7 +156,7 @@ input[type="submit"] {
   display: none; }
 
 /* Slider */
-.slick-loading .slick-list {
+.slick-list .slick-loading {
   background: url("../img/ajax-loader.gif") center center no-repeat; }
 
 /* Icons */
@@ -377,12 +287,12 @@ input[type="submit"] {
 
 .pokedex {
   width: 600px; }
-  .pokedex .main-form {
+  .pokedex .form-container .main-form {
     width: 100%;
     height: fit-content;
     background: #d2524d;
     border: 15px solid #f3cd4d;
-    border-bottom: 7px solid #f3cd4d;
+    border-bottom: none;
     border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -390,15 +300,29 @@ input[type="submit"] {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    .pokedex .main-form img {
-      margin: 2rem auto 1rem auto; }
-    .pokedex .main-form label {
-      margin: 2rem auto;
+    .pokedex .form-container .main-form img {
+      margin: 1rem auto 0 auto; }
+    .pokedex .form-container .main-form label {
+      margin: 2rem 2rem 0 auto;
       display: flex; }
+  .pokedex .form-container .name-container {
+    display: flex;
+    justify-content: flex-end;
+    border-left: 15px solid #f3cd4d;
+    border-right: 15px solid #f3cd4d;
+    background-color: #d2524d;
+    padding-right: 2rem; }
+    .pokedex .form-container .name-container #name-prev,
+    .pokedex .form-container .name-container #name-next {
+      background: darkslateblue; }
+      .pokedex .form-container .name-container #name-prev:active,
+      .pokedex .form-container .name-container #name-next:active {
+        box-shadow: inset 4px 4px 0px 0px #3e2977; }
   .pokedex .pokemon {
+    padding-top: 1rem;
     background-color: #d2524d;
     border: 15px solid #f3cd4d;
-    border-top: 7px solid #f3cd4d;
+    border-top: none;
     border-radius: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -406,7 +330,8 @@ input[type="submit"] {
     width: 100%; }
     .pokedex .pokemon .name {
       text-align: center;
-      font-size: 2.2rem; }
+      font-size: 2.2rem;
+      padding-bottom: 3rem; }
     .pokedex .pokemon .images-container {
       height: 275px;
       width: 275px;
@@ -422,9 +347,6 @@ input[type="submit"] {
 
 .guessSubmit {
   background: aquamarine;
-  border-radius: 0px;
-  border: none;
-  width: 80px;
   display: inline-block; }
 
 .details {
@@ -471,5 +393,9 @@ input[type="submit"] {
 .crt {
   animation: textShadow 1.6s infinite;
   background-color: black; }
+
+.name {
+  margin: 0;
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */

@@ -6,31 +6,49 @@
 
 .pokedex {
   width: 600px;
-  .main-form {
-    width: 100%;
-    height: fit-content;
-    background: $red;
-    border: $border-yellow;
-    border-bottom: 7px solid rgb(243, 205, 77);
-    border-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    img {
-      margin: 2rem auto 1rem auto;
-    }
-    label {
-      margin: 2rem auto;
+  .form-container {
+    .main-form {
+      width: 100%;
+      height: fit-content;
+      background: $red;
+      border: $border-yellow;
+      border-bottom: none;
+      border-radius: 10px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin: 1rem auto 0 auto;
+      }
+      label {
+        margin: 2rem 2rem 0 auto;
+        display: flex;
+      }
+    }
+    .name-container {
+      display: flex;
+      justify-content: flex-end;
+      border-left: 15px solid $yellow;
+      border-right: 15px solid $yellow;
+      background-color: $red;
+      padding-right: 2rem;
+      #name-prev,
+      #name-next {
+        background: rgb(72, 61, 139);
+        &:active {
+          box-shadow: inset 4px 4px 0px 0px rgb(62, 41, 119);
+        }
+      }
     }
   }
   .pokemon {
+    padding-top: 1rem;
     background-color: $red;
     border: $border-yellow;
-    border-top: 7px solid rgb(243, 205, 77);
+    border-top: none;
     border-radius: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -39,6 +57,7 @@
     .name {
       text-align: center;
       font-size: 2.2rem;
+      padding-bottom: 3rem;
     }
     .images-container {
       height: 275px;
@@ -60,9 +79,6 @@
 
 .guessSubmit {
   background: aquamarine;
-  border-radius: 0px;
-  border: none;
-  width: 80px;
   display: inline-block;
 }
 
@@ -120,4 +136,9 @@
 .crt {
   animation: textShadow 1.6s infinite;
   background-color: black;
+}
+
+.name {
+  margin: 0;
+  color: $white;
 }
