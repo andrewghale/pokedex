@@ -17,6 +17,7 @@ randomButton.addEventListener('click', e => {
   pokeApi(randomInput)
   // show the generated number in the number field
   document.getElementById('numberField').value = randomInput
+  // showLoader()
 })
 
 // Search
@@ -26,6 +27,7 @@ button.addEventListener('click', e => {
   // search for whatever number is in the number field
   const input = parseInt(number.value)
   pokeApi(input)
+  showLoader()
 })
 
 // Prev
@@ -36,6 +38,7 @@ namePrev.addEventListener('click', () => {
   pokeApi(prevNumber)
   // update the number field with new decremented number
   number.value = prevNumber
+  // showLoader()
 })
 
 // Next
@@ -44,7 +47,20 @@ nameNext.addEventListener('click', () => {
   const nextNumber = nextInt + 1
   pokeApi(nextNumber)
   number.value = nextNumber
+  // showLoader()
 })
+
+// const showLoader = () => {
+//   const image = document.getElementById('image')
+//   image.src = "../img/ajax-loader.gif"
+//   // console.log(image.src)
+
+// }
+
+// const removeLoaderId = () => {
+//   const image = document.getElementById('image')
+//   image.classList
+// }
 
 // Fetching the pokemon
 const pokeApi = (input) => {
@@ -84,7 +100,7 @@ const generateHtml = (data) => {
     <h1 class="name">${capitalizeFirst(name)}</h1>
     <div class="images-container crt">
       <div class="image-container">
-        <img src=${sprites.front_default} alt=${capitalizeFirst(name)}>
+        <img id="image" src=${sprites.front_default} alt=${capitalizeFirst(name)}>
       </div>
       <div class="image-container">
         <img src=${!sprites.back_default ? sprites.front_default : sprites.back_default} alt=${capitalizeFirst(name)}>

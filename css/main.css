@@ -58,8 +58,7 @@ input[type="number"] {
 
 input[type="submit"] {
   margin-top: -6px;
-  text-align: center;
-  outline: none; }
+  text-align: center; }
   input[type="submit"].search {
     background-color: #4caf50; }
   input[type="submit"].random {
@@ -75,7 +74,8 @@ input[type="submit"] {
   color: white;
   font-size: 1rem;
   font-family: "PokemonGb-RAeo";
-  box-shadow: inset -4px -4px 0px 0px rgba(0, 0, 0, 0.3); }
+  box-shadow: inset -4px -4px 0px 0px rgba(0, 0, 0, 0.3);
+  outline: none; }
   .button:active {
     transform: translateY(2px);
     box-shadow: inset 4px 4px 0px 0px rgba(0, 0, 0, 0.2); }
