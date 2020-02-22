@@ -14,7 +14,7 @@ randomButton.addEventListener('click', e => {
   // generate random number between 0 and 1 multiply by 806 (and then + 1) to chose between all 807 pokemon
   const randomInput = Math.floor(Math.random()*806)+1
   // put this random number into the function which fetches a pokemon
-  pokeApi(randomInput)
+  getData(randomInput)
   // show the generated number in the number field
   document.getElementById('numberField').value = randomInput
   // showLoader()
@@ -26,7 +26,7 @@ button.addEventListener('click', e => {
   e.preventDefault()
   // search for whatever number is in the number field
   const input = parseInt(number.value)
-  pokeApi(input)
+  getData(input)
   showLoader()
 })
 
@@ -35,7 +35,7 @@ namePrev.addEventListener('click', () => {
   // minus 1 from current shown number
   const prevNumber = (number.value - 1)
   // fetch the pokemon with that number
-  pokeApi(prevNumber)
+  getData(prevNumber)
   // update the number field with new decremented number
   number.value = prevNumber
   // showLoader()
@@ -45,7 +45,7 @@ namePrev.addEventListener('click', () => {
 nameNext.addEventListener('click', () => {
   let nextInt = parseInt(number.value)
   const nextNumber = nextInt + 1
-  pokeApi(nextNumber)
+  getData(nextNumber)
   number.value = nextNumber
   // showLoader()
 })
@@ -63,7 +63,7 @@ nameNext.addEventListener('click', () => {
 // }
 
 // Fetching the pokemon
-const pokeApi = (input) => {
+const getData = (input) => {
   // define the object
   const apiData = {
     url: 'https://pokeapi.co/api/v2/',
@@ -80,6 +80,63 @@ const pokeApi = (input) => {
     .then( (pokemon) => generateHtml(pokemon) )
 }
 
+// const getEvolutionChain = (input) => {
+//   const apiData = {
+//     url: 'https://pokeapi.co/api/v2/',
+//     type: 'evolution-chain',
+//     id: input
+//   }
+//   const{ url, type, id } = apiData
+//   const apiUrl = `${url}${type}/${id}`
+//   fetch(apiUrl)
+//     .then( (data) => data.json())
+//     .then( (evolutionChain) => console.log(evolutionChain) )
+// }
+
+const fetchEvolutionData = (pokemon) => {
+  let evoChain = {}
+  let evoChains = []
+  let url = pokemon.url
+    fetch(url)
+    .then(response => response.json())
+    .then(function(pokeData){
+      console.log(pokeData.chain.species.name)
+      console.log(pokeData.chain.evolves_to[0].species.name)
+      console.log(pokeData.chain.evolves_to[0].evolves_to[0].species.name)
+
+
+    })
+  }
+
+  const fetchKantoChains = () => {
+  fetch("https://pokeapi.co/api/v2/evolution-chain?limit=78")
+   .then(response => response.json())
+   .then((allEvolutionChains) => {
+   allEvolutionChains.results.forEach((pokemon) => {
+     evoChain = (fetchEvolutionData(pokemon))
+    //  evoChains.push(evoChain)
+    console.log(evoChain)
+   })
+  })
+ }
+
+const getEvolutionChains = () => {
+  for (i=0; i<=4; i++) {
+    let chain = getEvolutionChain(i+1);
+    console.log(chain)
+  }
+}
+
+
+
+///////////////////////////////////
+/////////////////////////////
+///////////////////
+
+
+
+
+
 // this function capitalizes the first letter in a string
 const capitalizeFirst = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
@@ -92,7 +149,7 @@ const getTypes = (data) => {
 }
 
 // Generate HTML
-// this function dynamically outputs HTML and displays the returned data in the pokeApi function
+// this function dynamically outputs HTML and displays the returned data in the getData function
 const generateHtml = (data) => {
   const { name, sprites, height, weight, id, moves } = data
   const html =
