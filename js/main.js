@@ -94,28 +94,36 @@ const getData = (input) => {
 // }
 
 const fetchEvolutionData = (pokemon) => {
-  let evoChain = {}
-  let evoChains = []
+  let evoChain = []
+  // let evoChains = []
   let url = pokemon.url
-    fetch(url)
-    .then(response => response.json())
-    .then(function(pokeData){
-      console.log(pokeData.chain.species.name)
-      console.log(pokeData.chain.evolves_to[0].species.name)
-      console.log(pokeData.chain.evolves_to[0].evolves_to[0].species.name)
-
-
-    })
-  }
-
-  const fetchKantoChains = () => {
-  fetch("https://pokeapi.co/api/v2/evolution-chain?limit=78")
-   .then(response => response.json())
-   .then((allEvolutionChains) => {
-   allEvolutionChains.results.forEach((pokemon) => {
-     evoChain = (fetchEvolutionData(pokemon))
-    //  evoChains.push(evoChain)
+  fetch(url)
+  .then(response => response.json())
+  .then(function(pokeData){
+    evoChain.push(pokeData.chain.species.name)
+    if (pokeData.chain.evolves_to[0].species.name) {
+      let second = pokeData.chain.evolves_to[0].species.name
+      evoChain.push(second)
+    }
+    if (pokeData.chain.evolves_to[0].evolves_to) {
+      let third = pokeData.chain.evolves_to[0].evolves_to
+      evoChain.push(third)
+    }
+    // console.log(pokeData.chain.evolves_to[0].species.name)
+    // console.log(pokeData.chain.evolves_to[0].evolves_to[0].species.name)
     console.log(evoChain)
+  })
+}
+
+async function fetchKantoChains() {
+  let evoChains = []
+  // let evoChains = []
+  await fetch("https://pokeapi.co/api/v2/evolution-chain?limit=88")
+  .then(response => response.json())
+  .then((allEvolutionChains) => {
+   allEvolutionChains.results.forEach((pokemon) => {
+     evoChains = (fetchEvolutionData(pokemon))
+     console.log(evoChains)
    })
   })
  }
